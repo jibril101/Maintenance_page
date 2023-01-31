@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Karla', sans-serif;
   background-image: url("../images/bg.jpg");
@@ -53,6 +54,10 @@ p {
   font-size: 14px;
   margin-bottom: 21px; }
 
+a { 
+  color: inherit; 
+}
+
 .footer-social-links .social-link {
   display: inline-block;
   text-align: center;
@@ -70,5 +75,21 @@ p {
     text-decoration: none;
     background-color: #000000;
     color: #ffffff; }
+
+a.effect-shine:hover {
+      -webkit-mask-image: linear-gradient(-60deg, rgba(0,0,0,.6) 30%, #000 60%, rgba(0,0,0,.6) 70%);
+      -webkit-mask-size: 300%;
+      animation: shine 5s infinite;
+    }
+    
+    @-webkit-keyframes shine {
+      from {
+        -webkit-mask-position: 150%;
+      }
+      
+      to {
+        -webkit-mask-position: -50%;
+      }
+    }
 
 /*# sourceMappingURL=bd-coming-soon.css.map */
