@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  name: cloudshaykh
+  labels:
+    name: cloudshaykh
+    env: production
+    tier: frontend
+spec:
+  replicas: 1
+  selector:
+  matchLabels:
+    name: cloudshaykh
+  template:
+    metadata:
+      labels:
+        name: cloudshaykh
+    spec:
+      imagePullSecrets:
+        - name: cloudshaykh-kubernetes-pull-secret
+      containers: gcr.io/northern-carver-376900/web-server:latest
+      imagePullPolicy: IfNotPresent
+    ports:
+      name: http
+      containerPort: 80
+      protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: websites
+  name: cloudshaykh
+  labels: 
+    name: cloudshaykh
+    env: production
+    tier: frontend
+spec:
+  selector:
+    name: cloudshaykh
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: http
+type: LoadBalancer
+    
