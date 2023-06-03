@@ -3,6 +3,7 @@ body {
   font-family: 'Karla', sans-serif;
   /* background-image: url("../images/cool-background.png"); */
   background-color: #000;
+  transition: background-color 0.5s ease;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
