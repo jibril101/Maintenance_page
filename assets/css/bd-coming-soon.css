@@ -11,6 +11,16 @@ body {
     body {
       padding-bottom: 110px; } }
 
+#main-content {
+  height: 20vh;
+  overflow-y: scroll;
+}
+
+section {
+  height: 100vh;
+  padding: 1px;
+}
+
 .navbar-brand {
   margin-right: 0; }
   .navbar-brand img {
