@@ -13,6 +13,14 @@ body {
     body {
       padding-bottom: 110px; } }
 
+.info-box {
+    background-color: #192145;
+    padding: 20px;
+    border-radius: 8px;
+    width: 470px;
+    box-shadow: 0 4px 8px 0 rgba(220, 114, 15, 0.1);
+}
+
 .navbar-brand {
   margin-right: 0; }
   .navbar-brand img {

@@ -5,5 +5,5 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(function() {
         var randomColor = colors[Math.floor(Math.random() * colors.length)];
         body.style.backgroundColor = randomColor;
-    }, 3200); // Set the interval to 60,000 milliseconds (1 minute)
+    }, 4000); // Set the interval to 60,000 milliseconds (1 minute)
 });
